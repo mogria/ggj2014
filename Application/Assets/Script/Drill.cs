@@ -18,7 +18,7 @@ namespace AssemblyCSharp
 
 				override public string GetPrefabPath()
 				{
-					return "Robo_Comp/Drill";
+					return "roboter/Drill";
 				}
 		}
 }

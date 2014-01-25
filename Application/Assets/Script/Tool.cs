@@ -33,7 +33,7 @@ namespace AssemblyCSharp
 
 				public void Hide()
 				{
-					Voxel.SetActive (false);
+					if(Voxel) Voxel.SetActive (false);
 				}
 		}
 }

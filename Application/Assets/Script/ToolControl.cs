@@ -11,6 +11,7 @@ public class ToolControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		var firstTool = new Laser ();
+		firstTool.Show ();
 		tools.Add(firstTool);
 		tools.Add(new Drill());
 		tools.Add(new BuilderTool());
