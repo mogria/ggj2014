@@ -10,14 +10,19 @@ public class Player : MonoBehaviour
     void Update() {
         CharacterController controller = GetComponent<CharacterController>();
         if (controller.isGrounded) {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+			moveDirection = new Vector3(Input.GetAxis("Vertical") * 0, 0, Input.GetAxis("Horizontal"));
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= speed;
             if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
+				Action ();
             
         }
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);
     }
+
+	void Action()
+	{
+
+	}
 }
