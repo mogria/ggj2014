@@ -14,6 +14,8 @@ namespace AssemblyCSharp
 {
 		public class Tool
 		{
+				public static Tool ActiveTool;
+
 				GameObject Voxel;
 				public Tool ()
 				{
@@ -24,6 +26,11 @@ namespace AssemblyCSharp
 				public virtual string GetPrefabPath()
 				{
 					return string.Empty;
+				}
+
+				public virtual void Action()
+				{
+					
 				}
 
 				public void Show()

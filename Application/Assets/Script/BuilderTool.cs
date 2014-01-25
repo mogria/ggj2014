@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+using UnityEngine;
+
 namespace AssemblyCSharp
 {
 		public class BuilderTool : Tool
@@ -20,6 +22,12 @@ namespace AssemblyCSharp
 				override public string GetPrefabPath()
 				{
 					return "roboter/Builder";
+				}
+		
+		
+				public override void Action ()
+				{
+					Debug.Log ("BUILD LIKE BOB");
 				}
 		}
 }

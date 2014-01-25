@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+using UnityEngine;
+
 namespace AssemblyCSharp
 {
 		public class Laser : Tool
@@ -19,6 +21,11 @@ namespace AssemblyCSharp
 				override public string GetPrefabPath()
 				{
 					return "roboter/Laser";
+				}
+
+				public override void Action ()
+				{
+					Debug.Log ("SHOOT");
 				}
 		}
 }

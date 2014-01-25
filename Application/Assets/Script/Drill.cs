@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+using UnityEngine;
+
 namespace AssemblyCSharp
 {
 		public class Drill : Tool
@@ -19,6 +21,12 @@ namespace AssemblyCSharp
 				override public string GetPrefabPath()
 				{
 					return "roboter/Drill";
+				}
+		
+		
+				public override void Action ()
+				{
+					Debug.Log ("GOING UNDER THE EARTH");
 				}
 		}
 }

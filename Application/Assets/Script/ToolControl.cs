@@ -10,9 +10,9 @@ public class ToolControl : MonoBehaviour {
 	List<Tool> tools = new List<Tool>();
 	// Use this for initialization
 	void Start () {
-		var firstTool = new Laser ();
-		firstTool.Show ();
-		tools.Add(firstTool);
+		Tool.ActiveTool = new Laser ();
+		Tool.ActiveTool.Show ();
+		tools.Add(Tool.ActiveTool);
 		tools.Add(new Drill());
 		tools.Add(new BuilderTool());
 		tools.Add(new Jetpack());
@@ -30,5 +30,6 @@ public class ToolControl : MonoBehaviour {
 	void ChangeTool(int i) {
 		tools.ForEach ((tool) => tool.Hide ());
 		tools [i].Show();
+		Tool.ActiveTool = tools [i];
 	}
 }

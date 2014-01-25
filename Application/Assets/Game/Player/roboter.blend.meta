@@ -1,57 +1,84 @@
 fileFormatVersion: 2
-guid: 4c8521f1a23722a43af170fb77493822
+guid: 1b28f31a713f6ab4d80fe476b044a6af
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: Body
-    100002: Builder
-    100004: Canon
-    100006: Chains
-    100008: Drill
-    100010: Laser
-    100012: //RootNode
-    100014: Springs
-    100016: Weels_B
-    100018: Weels_F
-    400000: Body
-    400002: Builder
-    400004: Canon
-    400006: Chains
-    400008: Drill
-    400010: Laser
-    400012: //RootNode
-    400014: Springs
-    400016: Weels_B
-    400018: Weels_F
+    100000: Armature
+    100002: Body
+    100004: Bone
+    100006: Bone_001
+    100008: Bone_002
+    100010: Bone_003
+    100012: Bone_004
+    100014: Builder
+    100016: Builder_001
+    100018: Builder_002
+    100020: Builder_003
+    100022: Builder_004
+    100024: Canon
+    100026: Chains
+    100028: Drill
+    100030: Laser
+    100032: //RootNode
+    100034: Springs
+    100036: Weels_B
+    100038: Weels_F
+    400000: Armature
+    400002: Body
+    400004: Bone
+    400006: Bone_001
+    400008: Bone_002
+    400010: Bone_003
+    400012: Bone_004
+    400014: Builder
+    400016: Builder_001
+    400018: Builder_002
+    400020: Builder_003
+    400022: Builder_004
+    400024: Canon
+    400026: Chains
+    400028: Drill
+    400030: Laser
+    400032: //RootNode
+    400034: Springs
+    400036: Weels_B
+    400038: Weels_F
     2300000: Body
-    2300002: Builder
-    2300004: Canon
-    2300006: Chains
-    2300008: Drill
-    2300010: Laser
-    2300012: Springs
-    2300014: Weels_B
-    2300016: Weels_F
+    2300002: Canon
+    2300004: Chains
+    2300006: Drill
+    2300008: Laser
+    2300010: Springs
+    2300012: Weels_B
+    2300014: Weels_F
     3300000: Body
-    3300002: Builder
-    3300004: Canon
-    3300006: Chains
-    3300008: Drill
-    3300010: Laser
-    3300012: Springs
-    3300014: Weels_B
-    3300016: Weels_F
-    4300000: Canon
-    4300002: Weels_F
-    4300004: Builder
-    4300006: Springs
-    4300008: Chains
-    4300010: Weels_B
-    4300012: Body
-    4300014: Drill
-    4300016: Laser
+    3300002: Canon
+    3300004: Chains
+    3300006: Drill
+    3300008: Laser
+    3300010: Springs
+    3300012: Weels_B
+    3300014: Weels_F
+    4300000: Builder
+    4300002: Builder_003
+    4300004: Builder_002
+    4300006: Builder_004
+    4300008: Builder_001
+    4300010: Canon
+    4300012: Weels_F
+    4300014: Springs
+    4300016: Chains
+    4300018: Weels_B
+    4300020: Body
+    4300022: Drill
+    4300024: Laser
     7400000: Default Take
     9500000: //RootNode
+    13700000: Builder
+    13700002: Builder_001
+    13700004: Builder_002
+    13700006: Builder_003
+    13700008: Builder_004
   materials:
     importMaterials: 1
     materialName: 0

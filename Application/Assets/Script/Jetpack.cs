@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+using UnityEngine;
+
 namespace AssemblyCSharp
 {
 		public class Jetpack : Tool
@@ -19,6 +21,11 @@ namespace AssemblyCSharp
 				override public string GetPrefabPath()
 				{
 					return "roboter/Springs";
+				}
+
+				public override void Action ()
+				{
+					Debug.Log ("FLY");
 				}
 		}
 }
