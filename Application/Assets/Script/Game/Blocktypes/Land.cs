@@ -8,13 +8,34 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-namespace AssemblyCSharp
+
+public class Land : Voxel
 {
-		public class Land
-		{
-				public Land ()
-				{
-				}
-		}
+	static GameObject originalObject;
+
+	public Land()
+	{
+		originalObject = init ();
+	}
+
+	public override UnityEngine.GameObject getOriginal ()
+	{
+		return originalObject;
+	}
+
+	public override string getPrefabPath ()
+	{
+		return "";
+	}
+
+	public override void Update ()
+	{
+		base.Update ();
+	}
+
+	public override void Start ()
+	{
+		base.Start ();
+	}
 }
 
