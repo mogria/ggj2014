@@ -12,14 +12,14 @@ namespace AssemblyCSharp
 {
 		public class BuilderTool : Tool
 		{
-				public BuilderTool ()
+				public BuilderTool () : base()
 				{
 				}
 
 		
 				override public string GetPrefabPath()
 				{
-					return "BuilderTool";
+					return "Robo_Comp/Cube";
 				}
 		}
 }

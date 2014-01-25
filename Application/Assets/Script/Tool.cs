@@ -18,11 +18,22 @@ namespace AssemblyCSharp
 				public Tool ()
 				{
 					Voxel = GameObject.Find(GetPrefabPath());
+					Hide ();
 				}
 
 				public virtual string GetPrefabPath()
 				{
 					return string.Empty;
+				}
+
+				public void Show()
+				{
+					Voxel.SetActive (true);
+				}
+
+				public void Hide()
+				{
+					Voxel.SetActive (false);
 				}
 		}
 }

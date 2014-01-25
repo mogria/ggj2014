@@ -12,13 +12,13 @@ namespace AssemblyCSharp
 {
 		public class Drill : Tool
 		{
-				public Drill ()
+				public Drill () : base()
 				{
 				}
 
 				override public string GetPrefabPath()
 				{
-					return "Drill";
+					return "Robo_Comp/Drill";
 				}
 		}
 }

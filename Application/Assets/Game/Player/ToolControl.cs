@@ -5,7 +5,7 @@ using System.Linq;
 
 using AssemblyCSharp;
 
-public class Tools : MonoBehaviour {
+public class ToolControl : MonoBehaviour {
 
 	List<Tool> tools = new List<Tool>();
 	// Use this for initialization

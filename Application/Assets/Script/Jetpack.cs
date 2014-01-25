@@ -12,13 +12,13 @@ namespace AssemblyCSharp
 {
 		public class Jetpack : Tool
 		{
-				public Jetpack ()
+				public Jetpack () : base()
 				{
 				}
 
 				override public string GetPrefabPath()
 				{
-					return "Jetpack";
+					return "Robo_Comp/Springs";
 				}
 		}
 }
