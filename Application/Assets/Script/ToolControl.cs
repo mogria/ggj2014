@@ -5,14 +5,15 @@ using System.Linq;
 
 using AssemblyCSharp;
 
-public class Tools : MonoBehaviour {
+public class ToolControl : MonoBehaviour {
 
 	List<Tool> tools = new List<Tool>();
 	// Use this for initialization
 	void Start () {
-		tools.Add(new BuilderTool());
+		var firstTool = new Laser ();
+		tools.Add(firstTool);
 		tools.Add(new Drill());
-		tools.Add(new Laser());
+		tools.Add(new BuilderTool());
 		tools.Add(new Jetpack());
 	}
 	
@@ -26,8 +27,7 @@ public class Tools : MonoBehaviour {
 	}
 
 	void ChangeTool(int i) {
-		var tool = tools [i];
-
-		// TODO: implement tool change
+		tools.ForEach ((tool) => tool.Hide ());
+		tools [i].Show();
 	}
 }
