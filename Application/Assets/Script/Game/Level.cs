@@ -6,8 +6,10 @@ public class Level : MonoBehaviour {
 
 	Queue<GameObject> Voxels = new Queue<GameObject>(); 
 
-	float leftBorder;
-	float rightBorder;
+	protected float leftBorder;
+	protected float rightBorder;
+
+	static float kSpeed = 5.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +21,7 @@ public class Level : MonoBehaviour {
 
 		UpdateBorder();
 
-		for (int i = (int)((rightBorder - leftBorder) / land.collider.bounds.size.x) + 2; i > 0; i--) {
+		for (int i = (int)((rightBorder - leftBorder) / land.collider.bounds.size.x) + 2; i >= 0; i--) {
 			AddVoxelToStart (land, new Vector3(
 				land.transform.position.x - (land.collider.bounds.size.x * i),
 				land.transform.position.y,
@@ -44,16 +46,32 @@ public class Level : MonoBehaviour {
 	void RemoveLastVoxel()
 	{
 		if (Voxels.Count > 0)
-			Voxels.Dequeue();
+			Destroy(Voxels.Dequeue());
 	}
 
 	// Update is called once per frame
 	void Update () {
 
 		// no calculation of the screen size jet
-		//UpdateBorder ();
+		UpdateBorder ();
 
+		// move ground
+		foreach(GameObject Voxel in Voxels)
+		{
+			// move ground
+			Voxel.transform.position -= new Vector3(
+				kSpeed * Time.deltaTime, 0, 0);
+		}
 
+		// Add new Border in front of the player
+		float posXLastVoxel = Voxels.ToArray ()[Voxels.Count - 1].transform.position.x;
+		while (posXLastVoxel < rightBorder) {
+			posXLastVoxel += GameObject.Find ("Land1").collider.bounds.size.x;
+			AddVoxelToStart(GameObject.Find ("Land1"), new Vector3(posXLastVoxel, 
+                                               GameObject.Find ("Land1").transform.position.y, 
+                                               GameObject.Find ("Land1").transform.position.z));
+			RemoveLastVoxel();
+		}
 	}
 
 	// Updates border, so there is no 
