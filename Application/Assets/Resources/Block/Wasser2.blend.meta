@@ -1,50 +1,13 @@
 fileFormatVersion: 2
-guid: 2ace33e2e27a32945b552e0770a677bf
+guid: 27d1374066fee494c8db6a4ba540b94d
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: Body
-    100002: Chains
-    100004: Cube
-    100006: Drill
-    100008: Laser
-    100010: //RootNode
-    100012: Springs
-    100014: Weels_B
-    100016: Weels_F
-    400000: Body
-    400002: Chains
-    400004: Cube
-    400006: Drill
-    400008: Laser
-    400010: //RootNode
-    400012: Springs
-    400014: Weels_B
-    400016: Weels_F
-    2300000: Body
-    2300002: Chains
-    2300004: Cube
-    2300006: Drill
-    2300008: Laser
-    2300010: Springs
-    2300012: Weels_B
-    2300014: Weels_F
-    3300000: Body
-    3300002: Chains
-    3300004: Cube
-    3300006: Drill
-    3300008: Laser
-    3300010: Springs
-    3300012: Weels_B
-    3300014: Weels_F
-    4300000: Cube
-    4300002: Springs
-    4300004: Chains
-    4300006: Weels_B
-    4300008: Body
-    4300010: Weels_F
-    4300012: Drill
-    4300014: Laser
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Wasser2
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -79,9 +42,9 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
   tangentSpace:
-    normalSmoothAngle: 13
+    normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0

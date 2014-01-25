@@ -80,6 +80,7 @@ public class Level : MonoBehaviour {
 
 	// Updates border, so there is no 
 	void UpdateBorder() {
+		// updates Border, uses Land1 as default size
 		float dist = (GameObject.Find ("Land1").transform.position - Camera.main.transform.position).z;
 
 		leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0,0,dist)).x;
