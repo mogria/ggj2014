@@ -13,13 +13,13 @@ public class Wather2 : Voxel {
 		initialize ();
 		
 		normalObject = (GameObject)Instantiate(originalObject, position, Quaternion.Euler(270,90,0));
-		normalObject.AddComponent ("Land");
+		normalObject.AddComponent ("Wather2");
 	}
 	
 	protected static void initialize()
 	{
 		if(originalObject == null)
-			originalObject = init ("Land1");
+			originalObject = init ("Wather2");
 	}
 	
 	/// <summary>

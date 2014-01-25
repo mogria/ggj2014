@@ -1,25 +1,25 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class Wather : Voxel {
+public class Stonewater2 : Voxel {
 	public static GameObject originalObject;
 	public GameObject normalObject;
 	
 	/// <summary>
 	/// Initializes a new instance of the Wather class.
 	/// </summary>
-	public Wather(Vector3 position)
+	public Stonewater2(Vector3 position)
 	{
 		initialize ();
 		
 		normalObject = (GameObject)Instantiate(originalObject, position, Quaternion.Euler(270,90,0));
-		normalObject.AddComponent ("Wather");
+		normalObject.AddComponent ("Stonewater2");
 	}
 	
 	protected static void initialize()
 	{
 		if(originalObject == null)
-			originalObject = init ("Wather");
+			originalObject = init ("Steinwasser2");
 	}
 	
 	/// <summary>
