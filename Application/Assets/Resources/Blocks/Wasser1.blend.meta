@@ -1,8 +1,15 @@
 fileFormatVersion: 2
-guid: 5394eaef90e022547bb321f6f331df09
+guid: 5192c3b81ba8d4745adcd047bb6b4744
 ModelImporter:
   serializedVersion: 16
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Wasser1
+    7400000: Default Take
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
