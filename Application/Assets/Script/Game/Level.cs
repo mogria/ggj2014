@@ -16,7 +16,7 @@ public class Level : MonoBehaviour {
 		// Loading Level
 
 		// TMP Land1 fix
-		GameObject land = GameObject.Find ("Land1");
+		GameObject land = Land.getOriginal();
 		
 
 		UpdateBorder();
@@ -66,6 +66,7 @@ public class Level : MonoBehaviour {
 		// Add new Border in front of the player
 		float posXLastVoxel = Voxels.ToArray ()[Voxels.Count - 1].transform.position.x;
 		while (posXLastVoxel < rightBorder) {
+			// create a new block
 			posXLastVoxel += (GameObject.Find ("Land1").collider.bounds.size.x);// GameObject.Find ("Land1").collider.bounds.size.x;
 			AddVoxelToStart(GameObject.Find ("Land1"), new Vector3(posXLastVoxel, 
                                                GameObject.Find ("Land1").transform.position.y, 
