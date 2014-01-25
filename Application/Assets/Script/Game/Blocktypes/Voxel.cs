@@ -4,14 +4,15 @@ using System.Collections;
 public class Voxel : MonoBehaviour {
 
 	// Load Prefab
-	protected GameObject init()
+	protected static GameObject init(string PrefabPath)
 	{
-		return (GameObject)Resources.Load (getPrefabPath ());
-	}
+		GameObject originalObject = (GameObject)Resources.Load (PrefabPath);
 
-	public float getXSize()
-	{
-		return getOriginal().collider.bounds.size.x;
+		originalObject.renderer.enabled = false;
+		originalObject.transform.position = new Vector3 (0.0f, -5.53f, -0.283f);
+		originalObject.transform.rotation = Quaternion.Euler (270, 90, 0);
+
+		return originalObject;
 	}
 
 	// Use this for initialization
@@ -22,14 +23,5 @@ public class Voxel : MonoBehaviour {
 	// Update is called once per frame
 	public virtual void Update () {
 		
-	}
-
-	public virtual string getPrefabPath() {
-		return null;
-	}
-	
-	public virtual GameObject getOriginal()
-	{
-		return null;
 	}
 }
