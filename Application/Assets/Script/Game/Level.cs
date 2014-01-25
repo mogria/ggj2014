@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Level : MonoBehaviour {
-
-	Queue<GameObject> Voxels = new Queue<GameObject>(); 
+	
+	Queue<GameObject> Voxels = new Queue<GameObject>();
+	List<GameObject> Blocktypes = new List<GameObject>();
 
 	protected float leftBorder;
 	protected float rightBorder;
@@ -17,15 +18,18 @@ public class Level : MonoBehaviour {
 
 		// TMP Land1 fix
 		GameObject land = Land.getOriginal();
-		
+
+		Blocktypes.Add(land);
+		Blocktypes.Add(Wather.getOriginal());
+		Blocktypes.Add(Wather2.getOriginal());
 
 		UpdateBorder();
 
-		for (int i = (int)((rightBorder - leftBorder) / land.collider.bounds.size.y) + 2; i >= 0; i--) {
+		for (int i = (int)((rightBorder - leftBorder) / land.collider.bounds.size.x) + 2; i >= 0; i--) {
 			AddVoxelToStart (land, new Vector3(
-				Voxel.getPosition().y - (land.collider.bounds.size.y * i),
-				Voxel.getPosition().y,
-				Voxel.getPosition().z));
+				land.transform.position.x - (land.collider.bounds.size.x * i),
+				land.transform.position.y,
+				land.transform.position.z));
 		}
 	}
 
@@ -51,6 +55,7 @@ public class Level : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		GameObject block;
 
 		// no calculation of the screen size jet
 		UpdateBorder ();
@@ -67,10 +72,11 @@ public class Level : MonoBehaviour {
 		float posXLastVoxel = Voxels.ToArray ()[Voxels.Count - 1].transform.position.x;
 		while (posXLastVoxel < rightBorder) {
 			// create a new block
-			posXLastVoxel += (Stonewater.getOriginal().collider.bounds.size.x);// GameObject.Find ("Land1").collider.bounds.size.x;
-			AddVoxelToStart(Stonewater.getOriginal(), new Vector3(posXLastVoxel, 
-                               					Voxel.getPosition().y, 
-                                             	Voxel.getPosition().z));
+			block = GetBlock();
+			posXLastVoxel += (block.collider.bounds.size.x);// GameObject.Find ("Land1").collider.bounds.size.x;
+			AddVoxelToStart(block, new Vector3(posXLastVoxel, 
+			                                   block.transform.position.y, 
+			                                   block.transform.position.z));
 		}
 		
 		//delete element at the end
@@ -78,18 +84,24 @@ public class Level : MonoBehaviour {
 			Destroy(Voxels.Dequeue());
 	}
 
+	GameObject GetBlock() {
+		float rand = Random.value;
+		int index = (int)(rand * Blocktypes.Count);
+		index = index % Blocktypes.Count;
+		return Blocktypes.ToArray()[index];
+	}
+
 	// Updates border, so there is no 
 	void UpdateBorder() {
-		// updates Border, uses Land1 as default size
-		float dist = (Voxel.getPosition() - Camera.main.transform.position).z;
+		float dist = (GameObject.Find ("Land1").transform.position - Camera.main.transform.position).z;
 
 		leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0,0,dist)).x;
 		rightBorder = Camera.main.ViewportToWorldPoint(new Vector3(1,0,dist)).x;
 
 		
 		// TMP Land1 fix
-		Stonerain.getOriginal().transform.position = new Vector3(rightBorder + 1,
-		                                                         Voxel.getPosition().y,
-		                                                         Voxel.getPosition().z);
+		GameObject.Find ("Land1").transform.position = new Vector3(rightBorder + 1,
+                           GameObject.Find ("Land1").transform.position.y,
+                           GameObject.Find ("Land1").transform.position.z);
 	}
 }
