@@ -49,7 +49,11 @@ public class Level : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		UpdateBorder ();
+
+		// no calculation of the screen size jet
+		//UpdateBorder ();
+
+
 	}
 
 	// Updates border, so there is no 
