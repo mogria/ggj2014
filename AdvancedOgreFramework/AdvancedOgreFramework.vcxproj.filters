@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien\Rocket">
+      <UniqueIdentifier>{49a69ccd-784d-401c-8b11-42c32acc615e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Quelldateien\Rocket">
+      <UniqueIdentifier>{cdfc3978-0d30-4cc6-9276-63b17ff64d27}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\ToDo.txt">
+      <Filter>Ressourcendateien</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\AdvancedOgreFramework.vcxproj.filters">
+      <Filter>Headerdateien</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AdvancedOgreFramework.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AppStateManager.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DotSceneLoader.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MenuState.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PauseState.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameState.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Event.cpp">
+      <Filter>Quelldateien\Rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EventInstancer.cpp">
+      <Filter>Quelldateien\Rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RenderInterfaceOgre3D.cpp">
+      <Filter>Quelldateien\Rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SystemInterfaceOgre3D.cpp">
+      <Filter>Quelldateien\Rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RocketOverlaySystem.cpp">
+      <Filter>Quelldateien\Rocket</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AdvancedOgreFramework.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AppState.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AppStateManager.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DotSceneLoader.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameState.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MenuState.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PauseState.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidxml.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RocketOverlaySystem.hpp">
+      <Filter>Headerdateien\Rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RenderInterfaceOgre3D.hpp">
+      <Filter>Headerdateien\Rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EventInstancer.hpp">
+      <Filter>Headerdateien\Rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event.hpp">
+      <Filter>Headerdateien\Rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SystemInterfaceOgre3D.hpp">
+      <Filter>Headerdateien\Rocket</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
