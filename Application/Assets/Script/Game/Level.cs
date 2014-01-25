@@ -70,8 +70,11 @@ public class Level : MonoBehaviour {
 			AddVoxelToStart(GameObject.Find ("Land1"), new Vector3(posXLastVoxel, 
                                                GameObject.Find ("Land1").transform.position.y, 
                                                GameObject.Find ("Land1").transform.position.z));
-			RemoveLastVoxel();
 		}
+		
+		//delete element at the end
+		while(Voxels.Peek().transform.position.x < leftBorder - 2)
+			Destroy(Voxels.Dequeue());
 	}
 
 	// Updates border, so there is no 

@@ -20,18 +20,18 @@ public class MenuScene : MonoBehaviour {
 	void OnGUI()
 	{
 		// Make a background box
-		GUI.Box(new Rect(10,10,100,90), "Game Menu");
+		GUI.Box(new Rect(10,10,100,130), "Game Menu");
 		
 		// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
-		StartButton = (Texture2D) Resources.Load("start-button", typeof(Texture2D));
-		if(GUI.Button(new Rect(20,40,80,20), new GUIContent(StartButton))) {
-			Application.LoadLevel("gamescene");
+		StartButton = (Texture2D) Resources.Load("Menu/Texture/start-button", typeof(Texture2D));
+		if(GUI.Button(new Rect(20,40,80,40), StartButton)) {
+			Application.LoadLevel("GameScene");
 		}
 		
 		// Make the second button.
-		QuitButton = (Texture2D) Resources.Load("quit-button", typeof(Texture2D));
-		if(GUI.Button(new Rect(20,70,80,20), new GUIContent(QuitButton))) {
-			Application.LoadLevel(2);
+		QuitButton = (Texture2D) Resources.Load("Menu/Texture/quit-button", typeof(Texture2D));
+		if(GUI.Button(new Rect(20,90,80,40), QuitButton)) {
+			Application.Quit();
 		}
 	}
 }
