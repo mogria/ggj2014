@@ -6,3 +6,4 @@ Application/Application.sln
 Application/Application.userprefs
 Application/Assembly-CSharp-vs.csproj
 Application/Assembly-CSharp.csproj
+*.meta
