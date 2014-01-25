@@ -13,7 +13,7 @@ using UnityEngine;
 
 public class Land : Voxel
 {
-	static GameObject originalObject;
+	public static GameObject originalObject;
 
 	/// <summary>
 	/// Initializes a new instance of the Land class.
