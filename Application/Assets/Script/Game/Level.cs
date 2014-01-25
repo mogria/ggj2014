@@ -16,7 +16,7 @@ public class Level : MonoBehaviour {
 		// Loading Level
 
 		// TMP Land1 fix
-		GameObject land = Land.getOriginal();
+		GameObject land = Wather.getOriginal();
 		
 
 		UpdateBorder();

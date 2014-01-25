@@ -24,6 +24,7 @@ public class Land : Voxel
 		initialize ();
 
 		normalObject = (GameObject)Instantiate(originalObject, position, Quaternion.Euler(270,90,0));
+		originalObject.transform.position = new Vector3 (0.0f, -5.53f, -0.283f);
 		normalObject.AddComponent ("Land");
 	}
 
