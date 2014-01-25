@@ -19,7 +19,7 @@ namespace AssemblyCSharp
 		
 				override public string GetPrefabPath()
 				{
-					return "BuilderTool";
+					return "Robo_Comp/Cube";
 				}
 		}
 }

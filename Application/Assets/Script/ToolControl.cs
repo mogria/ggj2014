@@ -10,10 +10,12 @@ public class Tools : MonoBehaviour {
 	List<Tool> tools = new List<Tool>();
 	// Use this for initialization
 	void Start () {
-		tools.Add(new BuilderTool());
+		var firstTool = new Laser ();
+		firstTool.Show ();
+		tools.Add(firstTool);
 		tools.Add(new Drill());
-		tools.Add(new Laser());
 		tools.Add(new Jetpack());
+		tools.Add(new BuilderTool());
 	}
 	
 	// Update is called once per frame
@@ -25,9 +27,8 @@ public class Tools : MonoBehaviour {
 		}
 	}
 
-	void ChangeTool(int i) {
-		var tool = tools [i];
-
-		// TODO: implement tool change
+	void ChangeTool(int index) {
+		tools.ForEach((tool) => tool.Hide());
+		tools [index].Show();
 	}
 }
