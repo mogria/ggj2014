@@ -19,7 +19,7 @@ public class Wather2 : Voxel {
 	protected static void initialize()
 	{
 		if(originalObject == null)
-			originalObject = init ("Wather2");
+			originalObject = init ("Wasser2");
 	}
 	
 	/// <summary>
