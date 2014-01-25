@@ -18,7 +18,7 @@ namespace AssemblyCSharp
 
 				override public string GetPrefabPath()
 				{
-					return "Jetpack";
+					return "roboter/Springs";
 				}
 		}
 }
