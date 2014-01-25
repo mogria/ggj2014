@@ -30,7 +30,7 @@ public class Land : Voxel
 	protected static void initialize()
 	{
 		if(originalObject == null)
-			originalObject = init ("Block/Land1");
+			originalObject = init ("Land1");
 	}
 
 	/// <summary>
