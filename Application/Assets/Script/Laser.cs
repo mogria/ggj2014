@@ -12,7 +12,7 @@ namespace AssemblyCSharp
 {
 		public class Laser : Tool
 		{
-				public Laser ()
+				public Laser () : base()
 				{
 				}
 

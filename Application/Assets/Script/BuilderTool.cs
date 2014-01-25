@@ -12,7 +12,7 @@ namespace AssemblyCSharp
 {
 		public class BuilderTool : Tool
 		{
-				public BuilderTool ()
+				public BuilderTool () : base()
 				{
 				}
 

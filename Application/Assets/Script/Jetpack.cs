@@ -12,7 +12,7 @@ namespace AssemblyCSharp
 {
 		public class Jetpack : Tool
 		{
-				public Jetpack ()
+				public Jetpack () : base()
 				{
 				}
 

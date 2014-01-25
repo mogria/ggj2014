@@ -12,7 +12,7 @@ namespace AssemblyCSharp
 {
 		public class Drill : Tool
 		{
-				public Drill ()
+				public Drill () : base()
 				{
 				}
 
