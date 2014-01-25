@@ -14,31 +14,34 @@ using UnityEngine;
 public class Land : Voxel
 {
 	public static GameObject originalObject;
+	public GameObject normalObject;
 
 	/// <summary>
 	/// Initializes a new instance of the Land class.
 	/// </summary>
-	public Land()
+	public Land(Vector3 position)
 	{
-		originalObject = init ();
+		initialize ();
+
+		normalObject = (GameObject)Instantiate(originalObject, position, Quaternion.Euler(270,90,0));
+		normalObject.AddComponent ("Land");
+	}
+
+	protected static void initialize()
+	{
+		if(originalObject == null)
+			originalObject = init ("Block/Land1");
 	}
 
 	/// <summary>
 	/// Gets the original GameObject.
 	/// </summary>
 	/// <returns>The original.</returns>
-	public override GameObject getOriginal ()
+	public static GameObject getOriginal ()
 	{
-		return base.getOriginal ();
-	}
+		initialize ();
 
-	/// <summary>
-	/// Gets the prefab path.
-	/// </summary>
-	/// <returns>The prefab path.</returns>
-	public override string getPrefabPath ()
-	{
-		return "hello";
+		return originalObject;
 	}
 
 	/// <summary>s
