@@ -8,34 +8,53 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+using System.Collections;
+using UnityEngine;
 
 public class Land : Voxel
 {
 	static GameObject originalObject;
 
+	/// <summary>
+	/// Initializes a new instance of the Land class.
+	/// </summary>
 	public Land()
 	{
 		originalObject = init ();
 	}
 
-	public override UnityEngine.GameObject getOriginal ()
+	/// <summary>
+	/// Gets the original GameObject.
+	/// </summary>
+	/// <returns>The original.</returns>
+	public override GameObject getOriginal ()
 	{
-		return originalObject;
+		return base.getOriginal ();
 	}
 
+	/// <summary>
+	/// Gets the prefab path.
+	/// </summary>
+	/// <returns>The prefab path.</returns>
 	public override string getPrefabPath ()
 	{
-		return "";
+		return "hello";
 	}
 
+	/// <summary>s
+	/// Update this instance.
+	/// </summary>
 	public override void Update ()
 	{
-		base.Update ();
+
 	}
 
+	/// <summary>
+	/// Start this instance.
+	/// </summary>
 	public override void Start ()
 	{
-		base.Start ();
+
 	}
 }
 

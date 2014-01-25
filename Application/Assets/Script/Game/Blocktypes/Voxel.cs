@@ -15,20 +15,20 @@ public class Voxel : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	public override void Start () {
+	public virtual void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	public override void Update () {
+	public virtual void Update () {
 		
 	}
 
-	public override string getPrefabPath() {
+	public virtual string getPrefabPath() {
 		return null;
 	}
 	
-	public override GameObject getOriginal()
+	public virtual GameObject getOriginal()
 	{
 		return null;
 	}
